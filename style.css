@@ -1,3 +1,8 @@
+* {
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
 #output-f, #output-c {
 	width: 200px;
 	height: 200px;
