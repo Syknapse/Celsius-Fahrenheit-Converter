@@ -15,15 +15,15 @@ $("#celsius-to-f[type='number']").keypress(function(event){
 		if (fahrenheit != parseInt(fahrenheit))
 			fahrenheit = fahrenheit.toFixed(1);
 		//display entered temp
-		$("#message-f").append(celsius + String.fromCharCode(8451) + " is");
+		$("#message-f").append(celsius + "<sup>&#8451</sup>" + " is");
 		//show fahrenheit value in output
-		$("#output-f").append(fahrenheit + String.fromCharCode(8457));
+		$("#output-f").append(fahrenheit + "<sup>&#8457</sup>");
 		//change background depending on temp
 		if (celsius < 10)
-			$('#output-f').attr('class', 'cold');
+			$('#celsius').attr('class', 'cold');
 		else if (celsius > 10 && celsius < 30)
-			$('#output-f').attr('class', 'mild');
-		else $('#output-f').attr('class', 'hot');
+			$('#celsius').attr('class', 'mild');
+		else $('#celsius').attr('class', 'hot');
 	}
 });
 
@@ -42,14 +42,14 @@ $("#fahrenheit-to-c[type='number']").keypress(function(event){
 		if (celsius != parseInt(celsius))
 			celsius = celsius.toFixed(1);
 		//display entered temp
-		$("#message-c").append(fahrenheit + String.fromCharCode(8457) + " is");
+		$("#message-c").append(fahrenheit + "<sup>&#8457</sup>" + " is");
 		//show fahrenheit value in output
-		$("#output-c").append(celsius + String.fromCharCode(8451));
+		$("#output-c").append(celsius + "<sup>&#8451</sup>");
 		//change background depending on temp
 		if (celsius < 10)
-			$('#output-c').attr('class', 'cold');
+			$('#fahrenheit').attr('class', 'cold');
 		else if (celsius > 10 && celsius < 30)
-			$('#output-c').attr('class', 'mild');
-		else $('#output-c').attr('class', 'hot');
+			$('#fahrenheit').attr('class', 'mild');
+		else $('#fahrenheit').attr('class', 'hot');
 	}
 });
