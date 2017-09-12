@@ -1,0 +1,21 @@
+#output-f, #output-c {
+	width: 200px;
+	height: 200px;
+	/*background-color: grey;*/
+}
+
+/*#message-f {
+	transition: .5s;
+}*/
+
+.cold {
+	background-color: blue;
+}
+
+.mild {
+	background-color: yellow;
+}
+
+.hot {
+	background-color: red;
+}
