@@ -8,21 +8,26 @@
 </head>
 <body>
 
-	<div id="container">
+	<div class="container">
 		<h1>CONVERT</h1>
-		<div id="celsius" class="background-transition">
-			<h2>Celsius</h2>
-			<input id="celsius-to-f" type="number">
-			<div id="message-f"></div>
-			<div id="output-f"></div>
+
+		<div id="converter">
+			<div id="celsius" class="background-transition">
+				<h2>Celsius</h2>
+				<input id="celsius-to-f" type="number">
+				<div id="message-f"></div>
+				<div id="output-f"></div>
+			</div>
+
+			<div id="fahrenheit" class="background-transition">
+				<h2>Fahrenheit</h2>
+				<input id="fahrenheit-to-c" type="number" name="">
+				<div id="message-c"></div>
+				<div id="output-c"></div>
+			</div>
 		</div>
 
-		<div id="fahrenheit" class="background-transition">
-			<h2>Fahrenheit</h2>
-			<input id="fahrenheit-to-c" type="number" name="">
-			<div id="message-c"></div>
-			<div id="output-c"></div>
-		</div>
+		<div class="reset">reset</div>
 	</div>
 
 <script type="text/javascript" src="script.js"></script>

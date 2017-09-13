@@ -53,3 +53,18 @@ $("#fahrenheit-to-c[type='number']").keypress(function(event){
 		else $('#fahrenheit').attr('class', 'hot');
 	}
 });
+
+// if (celsius < 1)
+// 			$('#fahrenheit').attr('class', 'freezing');
+// 		else if (celsius > 0 && celsius < 13)
+// 			$('#fahrenheit').attr('class', 'cold');
+// 		else if (celsius > 12 && celsius < 32)
+// 			$('#fahrenheit').attr('class', 'mild');
+// 		else $('#fahrenheit').attr('class', 'hot');
+
+//reset button
+$('.reset').click(function(){
+	$("#celsius-to-f[type='number'], #fahrenheit-to-c[type='number']").val("");
+	$("#output-f, #message-f, #output-c, #message-c").empty();
+	$('#celsius, #fahrenheit').attr('class', 'background-transition');	
+});

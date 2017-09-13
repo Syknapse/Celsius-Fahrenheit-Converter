@@ -5,14 +5,26 @@
 }
 body {
 	font-family: 'Yanone Kaffeesatz', sans-serif;
-	letter-spacing: 5px;
+	letter-spacing: 2vmin;
+	background-color: rgba(99, 255, 163, .7);
 }
-#container {
-	margin: 10vh auto auto
-	auto;
-	border: 1px solid;
+
+.container {
+	border: 1px solid rgba(50, 50, 50, .6);
+	margin: 8vh auto auto auto;
+	width: 85vw;
+	height: 80vh;
+	background-image: url("https://static.pexels.com/photos/71859/spring-flowers-stroll-cherry-blossom-71859.jpeg");
+
+	-webkit-box-shadow: -8px 8px 5px 0px rgba(50,50,50,0.4);
+	-moz-box-shadow: -8px 8px 5px 0px rgba(50,50,50,0.4);
+	box-shadow: -8px 8px 5px 0px rgba(50,50,50,0.4);
+}
+
+#converter {
 	width: 80vw;
-	height: 60vh;
+	height: 65vh;
+	margin: auto;
 
 	display: flex;
 	align-items: center;
@@ -20,23 +32,50 @@ body {
 	position: relative;
 	box-sizing: border-box;
 }
+
+.container, .container > *, #converter > * {
+	border-radius: 6px;
+}
+
 h1 {
-	position: absolute;
 	text-align: center;
-	top:0;
-	margin-top: 2%;
-	margin-bottom: 10%;
+	margin-top: 1.8%;
+}
+.reset {
+	width: 70px;
+	margin: auto;
+	text-align: center;
+	letter-spacing: .8vmin;
+	border: 1px solid rgba(50, 50, 50, .6);
+	padding: 5px;
+	background-color: rgba(120, 120, 120, .1);
+	cursor: pointer;
+	-webkit-box-shadow: -4px 4px 5px 0px rgba(50,50,50,0.4);
+	-moz-box-shadow: -4px 4px 5px 0px rgba(50,50,50,0.4);
+	box-shadow: -4px 4px 5px 0px rgba(50,50,50,0.4);
+}
+
+.reset:hover {
+	background-color: rgba(180, 120, 120, .2);
+
+	-webkit-box-shadow: -5px 5px 5px 0px rgba(50,50,50,0.5);
+	-moz-box-shadow: -5px 5px 5px 0px rgba(50,50,50,0.5);
+	box-shadow: -5px 5px 5px 0px rgba(50,50,50,0.5);
 }
 
 h2 {
+	font-size: 3vmin;
 	margin: 4% auto 4% auto;
 }
 
 #celsius, #fahrenheit {
-	border: 1px solid;
+	border: 1px solid rgba(50, 50, 50, .6);
 	margin: 5% auto 5% auto;
 	width: 40%;
-	height: 40vh;
+	height: 55vh;
+	-webkit-box-shadow: -8px 8px 5px 0px rgba(50,50,50,0.4);
+	-moz-box-shadow: -8px 8px 5px 0px rgba(50,50,50,0.4);
+	box-shadow: -8px 8px 5px 0px rgba(50,50,50,0.4);
 
 	display: flex;
 	flex-direction: column;
@@ -60,22 +99,26 @@ input {
 	border: none;
 
 	margin: 1% auto 1% auto;
-	border: 1px solid;
+	border: 1px solid rgba(50, 50, 50, .6);
 	border-radius: 50%;
 	width: 100px;
 	height: 100px;
 	font-size: xx-large;
 	text-align: center;
 	background-color: #eee;
+	-webkit-box-shadow: inset 4px -4px 5px 0px rgba(50,50,50,0.4);
+	-moz-box-shadow: inset 4px -4px 5px 0px rgba(50,50,50,0.4);
+	box-shadow: inset 4px -4px 5px 0px rgba(50,50,50,0.4);
 }
 
 #message-f, #message-c {
 	text-align: center;
 	font-size: 0em;
 	padding-top: 3%;
-	border-bottom: 1px solid;
+	border-bottom: 1px solid rgba(50, 50, 50, .6);
 	transition: .6s;
 }
+
 .cold #message-f, .cold #message-c, .mild #message-f, .mild #message-c, .hot #message-f, .hot #message-c {
 	font-size: 2.7em;
 }
@@ -84,7 +127,8 @@ input {
 	text-align: center;
 	font-size: 0em;
 	flex: 2;
-	padding-top: 10%;
+	padding: 10% 5px 10% 5px;
+	background-color: rgba(120, 120, 120, .2);
 	transition: .4s;
 }
 
@@ -93,17 +137,57 @@ input {
 }
 
 #message-f sup, #message-c sup, #output-f sup, #output-c sup {
-	font-size: 0.3em;
+	font-size: 0.4em;
 }
 
+.freezing {
+	background-image: url("https://farm5.staticflickr.com/4440/36814147090_7423e6b5e0_o.jpg");
+}
 .cold {
-	background-image: url("https://static.pexels.com/photos/5412/water-blue-ocean.jpg");
+	background-image: url("https://farm5.staticflickr.com/4335/36814146040_c0d0455f9c_o.jpg");
 }
 
 .mild {
-	background-image: url("https://static.pexels.com/photos/122458/pexels-photo-122458.jpeg");
+	background-image: url("https://farm5.staticflickr.com/4361/36397475723_a76b06382d_o.jpg");
 }
 
 .hot {
-	background-image: url("https://static.pexels.com/photos/73873/star-clusters-rosette-nebula-star-galaxies-73873.jpeg");
+	background-image: url("https://farm5.staticflickr.com/4372/36397476163_a9dffa2fc1_o.jpg");
 }
+
+
+@media screen and (orientation: portrait) {
+	.container {
+		height: 70vh;
+	}
+	#converter {
+		height: 55vh;
+	}
+	#celsius, #fahrenheit {
+		height: 40vh;
+	}
+	h1 {
+		text-align: center;
+		margin-top: 3.8%;
+	}
+	.cold #message-f, .cold #message-c, .mild #message-f, .mild #message-c, .hot #message-f, .hot #message-c {
+		font-size: 2em;
+	}
+	.cold #output-f, .cold #output-c, .mild #output-f, .mild #output-c, .hot #output-f, .hot #output-c {
+		font-size: 2.6em;
+	}
+}
+
+@media screen and (orientation: portrait) and (max-width: 575px) {
+	.container {
+		width: 92vw;
+	}
+	#converter {
+		width: 92vw;
+	}
+	#celsius, #fahrenheit {
+		width: 45%;
+		height: 35vh;
+	}
+}
+
