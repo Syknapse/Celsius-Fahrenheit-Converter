@@ -31,6 +31,7 @@ $("#celsius-to-f[type='number']").keydown(function(event){
 $("#fahrenheit-to-c[type='number']").keydown(function(event){
 	// listen to ENTER key
 	if(event.which === 13 || event.keyCode === 32 || event.keyCode === 9){
+		event.preventDefault();
 		//grab fahrenheit value from input
 		var fahrenheit = $(this).val();
 		//clear input and outputs
