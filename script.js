@@ -3,6 +3,7 @@ $(document).ready();
 $("#celsius-to-f[type='number']").keydown(function(event){
 	// listen to ENTER key
 	if(event.keyCode === 13 || event.keyCode === 32 || event.keyCode === 9){
+		event.preventDefault();
 		//grab celsius value from input
 		var celsius = $(this).val();
 		//clear input and outputs
