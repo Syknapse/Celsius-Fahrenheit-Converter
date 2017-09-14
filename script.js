@@ -1,6 +1,6 @@
 $(document).ready();
 
-$("#celsius-to-f[type='number']").keypress(function(event){
+$("#celsius-to-f[type='number']").keydown(function(event){
 	// listen to ENTER key
 	if(event.keyCode === 13 || event.keyCode === 32 || event.keyCode === 9){
 		//grab celsius value from input
@@ -27,7 +27,7 @@ $("#celsius-to-f[type='number']").keypress(function(event){
 	}
 });
 
-$("#fahrenheit-to-c[type='number']").keypress(function(event){
+$("#fahrenheit-to-c[type='number']").keydown(function(event){
 	// listen to ENTER key
 	if(event.which === 13 || event.keyCode === 32 || event.keyCode === 9){
 		//grab fahrenheit value from input
