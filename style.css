@@ -7,7 +7,8 @@
 body {
 	font-family: 'Yanone Kaffeesatz', sans-serif;
 	letter-spacing: 2vmin;
-	background-color: rgba(99, 255, 163, .7);
+	/*background-color: rgba(99, 255, 163, .7);*/
+	background-color: rgb(237, 225, 232);
 }
 
 .container {
@@ -214,10 +215,10 @@ input {
 		padding: 2% 5px 2% 5px;
 	}
 	.cold #message-f, .cold #message-c, .mild #message-f, .mild #message-c, .hot #message-f, .hot #message-c {
-		font-size: 2.3em;
+		font-size: 2em;
 	}
 	.cold #output-f, .cold #output-c, .mild #output-f, .mild #output-c, .hot #output-f, .hot #output-c {
-		font-size: 4.2em;
+		font-size: 2.9em;
 	}
 	.reset {
 		width: 140px;
@@ -226,7 +227,7 @@ input {
 	}
 }
 
-@media screen and (max-height: 600px) {
+@media screen and (max-height: 700px) {
 	.container {
 		height: 220vw;
 		width: 90vw;
@@ -263,5 +264,25 @@ input {
 		width: 140px;
 		padding: 3px;
 		font-size: 3.2vmin;
+	}
+	.background-transition {
+		background-image: url("https://static.pexels.com/photos/71859/spring-flowers-stroll-cherry-blossom-71859.jpeg");
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.cold {
+		background-image: url("https://farm5.staticflickr.com/4335/36814146040_c0d0455f9c_o.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.mild {
+		background-image: url("https://farm5.staticflickr.com/4361/36397475723_a76b06382d_o.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.hot {
+		background-image: url("https://farm5.staticflickr.com/4372/36397476163_a9dffa2fc1_o.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 }
