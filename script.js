@@ -1,11 +1,14 @@
 $(document).ready();
 
 $("#celsius-to-f[type='number']").keydown(function(event){
-	// listen to ENTER key
+	// listen to ENTER, SPACE, or TAB key
 	if(event.keyCode === 13 || event.keyCode === 32 || event.keyCode === 9){
+		// force tab key to behave like enter (for mobile)
 		event.preventDefault();
 		//grab celsius value from input
 		var celsius = $(this).val();
+		// do not submit of there is no input
+		if(celsius == ""){ return false;}
 		//clear input and outputs
 		$(this).val("");
 		$("#output-f").empty();
@@ -29,11 +32,14 @@ $("#celsius-to-f[type='number']").keydown(function(event){
 });
 
 $("#fahrenheit-to-c[type='number']").keydown(function(event){
-	// listen to ENTER key
+	// listen to ENTER, SPACE, or TAB key
 	if(event.which === 13 || event.keyCode === 32 || event.keyCode === 9){
+		// force tab key to behave like enter (for mobile)
 		event.preventDefault();
 		//grab fahrenheit value from input
 		var fahrenheit = $(this).val();
+		// do not submit of there is no input
+		if(fahrenheit == ""){ return false;}
 		//clear input and outputs
 		$(this).val("");
 		$("#output-c").empty();
@@ -63,6 +69,7 @@ $("#fahrenheit-to-c[type='number']").keydown(function(event){
 // 		else if (celsius > 12 && celsius < 32)
 // 			$('#fahrenheit').attr('class', 'mild');
 // 		else $('#fahrenheit').attr('class', 'hot');
+
 
 //reset button
 $('.reset').click(function(){
