@@ -30,7 +30,7 @@ $("#celsius-to-f[type='number']").keydown(function(event){
 		//change background depending on temp
 		if (celsius < 10)
 			$('#celsius').attr('class', 'cold');
-		else if (celsius > 10 && celsius < 30)
+		else if (celsius > 9 && celsius < 30)
 			$('#celsius').attr('class', 'mild');
 		else $('#celsius').attr('class', 'hot');
 	}
@@ -66,7 +66,7 @@ $("#fahrenheit-to-c[type='number']").keydown(function(event){
 		//change background depending on temp
 		if (celsius < 10)
 			$('#fahrenheit').attr('class', 'cold');
-		else if (celsius > 10 && celsius < 30)
+		else if (celsius > 9 && celsius < 30)
 			$('#fahrenheit').attr('class', 'mild');
 		else $('#fahrenheit').attr('class', 'hot');
 	}
