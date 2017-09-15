@@ -3,7 +3,11 @@
 	border: 0;
 	padding: 0;
 }
+/*html {
+	height: 100%;
+}*/
 body {
+	/*height: 100%;*/
 	font-family: 'Yanone Kaffeesatz', sans-serif;
 	letter-spacing: 2vmin;
 	background-color: rgba(99, 255, 163, .7);
@@ -82,11 +86,13 @@ h2 {
 	justify-content: space-between;
 	box-sizing: border-box;
 
+	-webkit-transition: .9s;
+    -moz-transition: .9s;
+    -o-transition: .9s;
 	transition: .9s;
 }
 .background-transition {
 	background-image: url("https://static.pexels.com/photos/71859/spring-flowers-stroll-cherry-blossom-71859.jpeg");
-	/*transition: .9s;*/
 }
 
 input {
@@ -116,6 +122,10 @@ input {
 	font-size: 0em;
 	padding-top: 3%;
 	border-bottom: 1px solid rgba(50, 50, 50, .6);
+
+	-webkit-transition: .6s;
+    -moz-transition: .6s;
+    -o-transition: .6s;
 	transition: .6s;
 }
 
@@ -129,6 +139,10 @@ input {
 	flex: 2;
 	padding: 10% 5px 10% 5px;
 	background-color: rgba(120, 120, 120, .2);
+
+	-webkit-transition: .4s;
+    -moz-transition: .4s;
+    -o-transition: .4s;
 	transition: .4s;
 }
 
@@ -156,6 +170,7 @@ input {
 }
 
 
+/* +++++++++++++++++ media queries +++++++++++++++++ */
 @media screen and (max-width: 1380px) {
 	.container {
 		width: 90vw;
@@ -175,9 +190,15 @@ input {
 }
 
 @media screen and (orientation: portrait) {
+	html {
+		height: 100%;
+	}
+	body {
+		height: 100%;
+	}
 	.container {
-		height: 95vh;
-		width: 90vw;
+		height: 95%;
+		width: 90%;
 		margin: 2vh auto auto auto;
 	}
 	#converter {
@@ -213,17 +234,3 @@ input {
 		font-size: 3.2vmin;
 	}
 }
-
-/*@media screen and (orientation: portrait) and (max-width: 575px) {
-	.container {
-		width: 92vw;
-	}
-	#converter {
-		width: 92vw;
-	}
-	#celsius, #fahrenheit {
-		width: 45%;
-		height: 35vh;
-	}
-}
-*/
