@@ -3,11 +3,8 @@
 	border: 0;
 	padding: 0;
 }
-/*html {
-	height: 100%;
-}*/
+
 body {
-	/*height: 100%;*/
 	font-family: 'Yanone Kaffeesatz', sans-serif;
 	letter-spacing: 2vmin;
 	background-color: rgba(99, 255, 163, .7);
@@ -190,15 +187,9 @@ input {
 }
 
 @media screen and (orientation: portrait) {
-	html {
-		height: 100%;
-	}
-	body {
-		height: 100%;
-	}
 	.container {
-		height: 95%;
-		width: 90%;
+		height: 95vh;
+		width: 90vw;
 		margin: 2vh auto auto auto;
 	}
 	#converter {
@@ -208,6 +199,46 @@ input {
 	}
 	#celsius, #fahrenheit {
 		height: 40vh;
+		width: 80%;
+		margin: 2% auto 2% auto;
+	}
+	h1 {
+		text-align: center;
+		margin-top: 2%;
+	}
+	h2 {
+		font-size: 4vmin;
+		margin: 3% auto 1% auto;
+	}
+	#output-f, #output-c {
+		padding: 2% 5px 2% 5px;
+	}
+	.cold #message-f, .cold #message-c, .mild #message-f, .mild #message-c, .hot #message-f, .hot #message-c {
+		font-size: 2.3em;
+	}
+	.cold #output-f, .cold #output-c, .mild #output-f, .mild #output-c, .hot #output-f, .hot #output-c {
+		font-size: 4.2em;
+	}
+	.reset {
+		width: 140px;
+		padding: 3px;
+		font-size: 3.2vmin;
+	}
+}
+
+@media screen and (max-height: 600px) {
+	.container {
+		height: 220vw;
+		width: 90vw;
+		margin: 2vh auto 4vh auto;
+	}
+	#converter {
+		flex-direction: column;
+		height: 185vw;
+		width: 90vw;
+	}
+	#celsius, #fahrenheit {
+		height: 70%;
 		width: 80%;
 		margin: 2% auto 2% auto;
 	}
