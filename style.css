@@ -195,7 +195,7 @@ input {
 	}
 	#converter {
 		flex-direction: column;
-		height: 85vh;
+		height: 83vh;
 		width: 90vw;
 	}
 	#celsius, #fahrenheit {
@@ -224,6 +224,7 @@ input {
 		width: 140px;
 		padding: 3px;
 		font-size: 3.2vmin;
+		margin-top: 1vh;
 	}
 }
 
@@ -285,5 +286,8 @@ input {
 		background-image: url("https://farm5.staticflickr.com/4372/36397476163_a9dffa2fc1_o.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
+	}
+	.reset {
+		margin-top: 5%;
 	}
 }
