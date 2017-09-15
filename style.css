@@ -229,6 +229,7 @@ input {
 
 @media screen and (max-height: 700px) {
 	.container {
+		background-image: none;
 		height: 220vw;
 		width: 90vw;
 		margin: 2vh auto 4vh auto;
@@ -255,10 +256,10 @@ input {
 		padding: 2% 5px 2% 5px;
 	}
 	.cold #message-f, .cold #message-c, .mild #message-f, .mild #message-c, .hot #message-f, .hot #message-c {
-		font-size: 2.3em;
+		font-size: 2em;
 	}
 	.cold #output-f, .cold #output-c, .mild #output-f, .mild #output-c, .hot #output-f, .hot #output-c {
-		font-size: 4.2em;
+		font-size: 2.9em;
 	}
 	.reset {
 		width: 140px;
@@ -266,7 +267,7 @@ input {
 		font-size: 3.2vmin;
 	}
 	.background-transition {
-		background-image: url("https://static.pexels.com/photos/71859/spring-flowers-stroll-cherry-blossom-71859.jpeg");
+		background-image: url("https://farm5.staticflickr.com/4335/37101885381_087da73ce4_o.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
