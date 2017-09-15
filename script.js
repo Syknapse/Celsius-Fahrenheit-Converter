@@ -7,8 +7,6 @@ $("#celsius-to-f[type='number']").keydown(function(event){
 		event.preventDefault();
 		//grab celsius value from input
 		var celsius = $(this).val();
-		// do not submit of there is no input
-		if(celsius == ""){ return false;}
 		//clear input and outputs
 		$(this).val("");
 		$("#output-f").empty();
@@ -22,6 +20,13 @@ $("#celsius-to-f[type='number']").keydown(function(event){
 		$("#message-f").append(celsius + "<sup>&#8451</sup>" + " is");
 		//show fahrenheit value in output
 		$("#output-f").append(fahrenheit + "<sup>&#8457</sup>");
+		// give message 'invalid value' if no value or more than 6 digits submitted
+		if(celsius == "" || celsius.length >= 7){
+			$("#message-f").empty();
+			$("#output-f").empty();
+			$("#message-f").css('font-size', '2em').append("<span>Invalid Value</span>");
+		}
+
 		//change background depending on temp
 		if (celsius < 10)
 			$('#celsius').attr('class', 'cold');
@@ -33,13 +38,11 @@ $("#celsius-to-f[type='number']").keydown(function(event){
 
 $("#fahrenheit-to-c[type='number']").keydown(function(event){
 	// listen to ENTER, SPACE, or TAB key
-	if(event.which === 13 || event.keyCode === 32 || event.keyCode === 9){
+	if(event.keyCode === 13 || event.keyCode === 32 || event.keyCode === 9){
 		// force tab key to behave like enter (for mobile)
 		event.preventDefault();
 		//grab fahrenheit value from input
 		var fahrenheit = $(this).val();
-		// do not submit of there is no input
-		if(fahrenheit == ""){ return false;}
 		//clear input and outputs
 		$(this).val("");
 		$("#output-c").empty();
@@ -53,6 +56,13 @@ $("#fahrenheit-to-c[type='number']").keydown(function(event){
 		$("#message-c").append(fahrenheit + "<sup>&#8457</sup>" + " is");
 		//show fahrenheit value in output
 		$("#output-c").append(celsius + "<sup>&#8451</sup>");
+		// give message 'invalid value' if no value or more than 7 digits submitted
+		if(fahrenheit == "" || fahrenheit.length >= 8){
+			$("#message-c").empty();
+			$("#output-c").empty();
+			$("#message-c").css('font-size', '2em').append("<span>Invalid Value</span>");
+		}
+
 		//change background depending on temp
 		if (celsius < 10)
 			$('#fahrenheit').attr('class', 'cold');

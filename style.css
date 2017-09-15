@@ -156,29 +156,65 @@ input {
 }
 
 
-@media screen and (orientation: portrait) {
+@media screen and (max-width: 1380px) {
 	.container {
-		height: 70vh;
+		width: 90vw;
 	}
 	#converter {
-		height: 55vh;
+		width: 90vw;
 	}
 	#celsius, #fahrenheit {
-		height: 40vh;
-	}
-	h1 {
-		text-align: center;
-		margin-top: 3.8%;
+		width: 43%;
 	}
 	.cold #message-f, .cold #message-c, .mild #message-f, .mild #message-c, .hot #message-f, .hot #message-c {
-		font-size: 2em;
+		font-size: 2.2em;
 	}
 	.cold #output-f, .cold #output-c, .mild #output-f, .mild #output-c, .hot #output-f, .hot #output-c {
-		font-size: 2.6em;
+		font-size: 3em;
 	}
 }
 
-@media screen and (orientation: portrait) and (max-width: 575px) {
+@media screen and (orientation: portrait) {
+	.container {
+		height: 95vh;
+		width: 90vw;
+		margin: 2vh auto auto auto;
+	}
+	#converter {
+		flex-direction: column;
+		height: 85vh;
+		width: 90vw;
+	}
+	#celsius, #fahrenheit {
+		height: 40vh;
+		width: 80%;
+		margin: 2% auto 2% auto;
+	}
+	h1 {
+		text-align: center;
+		margin-top: 2%;
+	}
+	h2 {
+		font-size: 4vmin;
+		margin: 3% auto 1% auto;
+	}
+	#output-f, #output-c {
+		padding: 2% 5px 2% 5px;
+	}
+	.cold #message-f, .cold #message-c, .mild #message-f, .mild #message-c, .hot #message-f, .hot #message-c {
+		font-size: 2.3em;
+	}
+	.cold #output-f, .cold #output-c, .mild #output-f, .mild #output-c, .hot #output-f, .hot #output-c {
+		font-size: 4.2em;
+	}
+	.reset {
+		width: 140px;
+		padding: 3px;
+		font-size: 3.2vmin;
+	}
+}
+
+/*@media screen and (orientation: portrait) and (max-width: 575px) {
 	.container {
 		width: 92vw;
 	}
@@ -190,4 +226,4 @@ input {
 		height: 35vh;
 	}
 }
-
+*/
